@@ -93,8 +93,9 @@ async def export_messages(export_file = "PATH TO lista.txt"):
 
         try:
             contenido_elBarco = scraper()
-            cleansed_content = cleanse_message(contenido_elBarco)
-            channel_dict = update_channel_dict(cleansed_content, channel_dict)
+            if len(contenido_elBarco) > 0:
+                cleansed_content = cleanse_message(contenido_elBarco)
+                channel_dict = update_channel_dict(cleansed_content, channel_dict)
         except Exception as e:
             print("elBarcoTorMain : ERROR :", e)
 
