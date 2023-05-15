@@ -19,7 +19,7 @@ def scraper():
         try:
             with TorRequests() as tor_requests:
                 with tor_requests.get_session() as sess:
-                    grab = sess.get("https://elcano.in")
+                    grab = sess.get("https://elcano.top")
                     print(grab)
         except:
             pass
